@@ -1,0 +1,98 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Dokumentasi API",
+    "description": "Adipisicing minim fugiat anim proident ea labore. Laborum deserunt enim excepteur ullamco reprehenderit Lorem officia dolor. Minim officia ex reprehenderit duis culpa et et elit cillum consectetur. Ipsum anim fugiat consectetur cupidatat et laborum. Mollit dolor ea officia et. Consequat ipsum mollit duis laboris et sit duis proident quis ipsum mollit occaecat sint. Est sit esse Lorem anim esse aliqua.",
+    "version": "1.0.0 Beta"
+  },
+  "host": "reqres.in",
+  "basePath": "/api",
+  "schemes": ["https"],
+  "tags": [
+    {
+      "name": "Colors",
+      "description": "Everything about your Colors"
+    }
+  ],
+  "paths": {
+    "/users": {
+      "get": {
+        "tags": ["List Users"],
+        "summary": "Ambil semua nama",
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          }
+        }
+      },
+      "post" : {
+        "tags": ["Create New User"],
+        "summary": "Menambah User Baru",
+        "description": "",
+        "produces": ["application/json"],
+        "parameters": [{
+            "in": "body",
+            "name": "body",
+            "description": "Inputkan nama dan pekerjaan user baru",
+            "required": true
+        }],
+        "responses": { "201": { "description": "Berhasil Menambahkan User Baru" } }
+        }
+        
+    },
+    "/users/2": {
+      "get": {
+        "tags": ["Single User"],
+        "summary": "Nama User",
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          }
+        }
+      },
+      "put" : {
+        "tags": ["Update User"],
+        "summary": "Memperbarui Data User",
+        "description": "",
+        "produces": ["application/json"],
+        "parameters": [{
+            "in": "body",
+            "name": "body",
+            "description": "Inputkan nama dan pekerjaan user ",
+            "required": true
+        }],
+        "responses": { "200": { "description": "Berhasil Memperbarui User" } }
+       },
+       "delete" : {
+        "tags": ["Delete User"],
+        "summary": "Menghapus Data User",
+        "produces": ["application/json"],
+        "responses": { "204" : { "description": "" }}
+       }
+    },
+    "/register": {
+      "post": {
+        "tags": ["Register"],
+        "summary": "Id dan Token",
+        "produces": ["application/json"],
+        "parameters": [{
+          "in": "body",
+          "name": "body",
+          "description": "Inputkan nama dan pekerjaan user ",
+          "required": true
+      }],
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          }
+        }
+      }
+
+    
+  }
+
+    
+  }
+}
